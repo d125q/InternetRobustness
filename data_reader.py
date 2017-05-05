@@ -8,7 +8,7 @@ import time
 
 
 def read_data(dirname, filename_format, reader, *args, **kwargs):
-    """Read internet topology data.
+    """Read Internet topology data.
 
     Filenames are assumed to be timestamped, e.g.,
     ``201603.relationship.gz''.  Such file would indicate the state of
@@ -31,9 +31,8 @@ def read_data(dirname, filename_format, reader, *args, **kwargs):
 
     Returns
     -------
-    generator of (networkx.Graph, time.struct_time)
+    generator of (networkx.Graph (or similar), time.struct_time)
         Graphs that were read.
-
     """
     for root, _, filenames in os.walk(dirname):
         for filename in filenames:
